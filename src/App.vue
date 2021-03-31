@@ -12,7 +12,7 @@
     ">
       じつは私...
     </p>
-    <ul class="bl_maker_slots">
+    <ul class="bl_maker_slots" style="margin-bottom: 30px;">
       <li>
         <Slot :items="items[0]" />
       </li>
@@ -32,6 +32,9 @@
       なんです！！
     </p>
   </div>
+  <div class="bl_share">
+    <a class="bl_share_link" @click="share">皆にも知らしめよう！</a>
+  </div>
 </div>
 </template>
 
@@ -45,6 +48,7 @@ export default {
   },
   data () {
     return {
+      twitter:'https://twitter.com/intent/tweet?url=https://yahoo.co.jp&text=ヤフーのサイト&hashtags=孫正義,ヤフー',
       items: [
         [
           '超絶可愛い',
@@ -85,6 +89,11 @@ export default {
       ]
     }
   },
+  methods: {
+    share () {
+      location.href = 'https://twitter.com/intent/tweet?text=私は"うんち"です！！&url=https://misato-miyahara.github.io/uso-maker/'
+    }
+  },
   head: {
     link: [
       {
@@ -119,6 +128,14 @@ body {
   background: -webkit-linear-gradient(0deg, #0051ff, #ff0095, #09ff00, #eeff00, #ff3232);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.bl_share {
+  text-align: center;
+}
+.bl_share_link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(0, 4, 255);
 }
 @media screen and (max-width: 800px) {
   .bl_maker_slots {

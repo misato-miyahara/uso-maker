@@ -76,6 +76,7 @@ export default {
   background-color: rgb(220, 255, 247);
   cursor: pointer;
   box-shadow: 0px 0px 16px -6px rgba(0,0,0,0.6);
+  outline: none;
 }
 .el_slot_btn:hover {
   box-shadow: none;
