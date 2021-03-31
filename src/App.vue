@@ -119,13 +119,17 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 1.4em;
 }
+.ly_wrapper {
+  max-width: 1600px;
+  margin: auto;
+}
 .bl_maker_slots {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .el_rainbow {
   color: #FF8C00;
-  background: -webkit-linear-gradient(0deg, #0051ff, #ff0095, #09ff00, #eeff00, #ff3232);
+  background: -webkit-linear-gradient(0deg, #0051ff, #ff0095, #ff6600, #09ff00, #eeff00, #ff3232);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
